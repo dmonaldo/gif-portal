@@ -8,9 +8,7 @@ const main = async() => {
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;
-
   const baseAccount = anchor.web3.Keypair.generate();
-
   const tx = await program.rpc.startStuffOff({
     accounts: {
       baseAccount: baseAccount.publicKey,
@@ -26,7 +24,7 @@ const main = async() => {
   console.log('👀 GIF Count', account.totalGifs.toString());
 
   console.log('👨‍💻 Incrementing GIF count...')
-  await program.rpc.addGif({
+  await program.rpc.addGif("insert_a_giphy_link_here", {
     accounts: {
       baseAccount: baseAccount.publicKey,
     }
@@ -34,6 +32,8 @@ const main = async() => {
 
   account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString());
+
+  console.log('📒 GIF List:', account.gifList);
 }
 
 const runMain = async() => {
