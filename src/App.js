@@ -190,10 +190,10 @@ const App = () => {
         <div className="header-container">
           <p className="header">🖼 GIF Portal</p>
           <p className="sub-text">
-            View your GIF collection in the metaverse ✨
+            View your GIF collection in the Solana metaverse ✨
           </p>
           <p className="sub-text">
-            Built on Solana by <a href="https://dantemonaldo.com">Dante</a>.
+            Built by <a href="https://dantemonaldo.com">Dante</a>.
           </p>
           {!walletAddress && renderNotConnectedContainer()}
           {walletAddress && renderConnectedContainer()}
