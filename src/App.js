@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import idl from './idl.json';
 import kp from './keypair.json';
 import twitterLogo from './assets/twitter-logo.svg';
@@ -94,12 +94,6 @@ const App = () => {
     }
   }
 
-  const parsePublicKey = (key) => {
-    console.log(key);
-    let publicKey = new PublicKey(key);
-    return publicKey;
-  }
-
   const sendGif = async () => {
     if (inputValue.length === 0)
       return;
@@ -154,7 +148,7 @@ const App = () => {
           <div className="gif-grid">
             {gifList.map((item, index) => (
               <div className="gif-item" key={index}>
-                <img src={item.gifLink} />
+                <img src={item.gifLink} alt="item.gifLink" />
               </div>
             ))}
           </div>
@@ -169,7 +163,7 @@ const App = () => {
     });
   }, []);
 
-  const getGifList = async() => {
+  const getGifList = useCallback(async() => {
     try {
       const provider = getProvider();
       const program = new Program(idl, programID, provider);
@@ -181,14 +175,14 @@ const App = () => {
       console.log('Error in getGifs: ', e);
       setGifList(null);
     }
-  }
+  }, []);
 
   useEffect(() => {
     if (walletAddress) {
       console.log('Fetching GIF list...');
       getGifList();
     }
-  }, [walletAddress]);
+  }, [walletAddress, getGifList]);
 
   return (
     <div className="App">
@@ -197,6 +191,9 @@ const App = () => {
           <p className="header">🖼 GIF Portal</p>
           <p className="sub-text">
             View your GIF collection in the metaverse ✨
+          </p>
+          <p className="sub-text">
+            Built on Solana by <a href="https://dantemonaldo.com">Dante</a>.
           </p>
           {!walletAddress && renderNotConnectedContainer()}
           {walletAddress && renderConnectedContainer()}
