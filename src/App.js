@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import idl from './idl.json';
+import kp from './keypair.json';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import { Connection, PublicKey, clusterApiUrl} from '@solana/web3.js';
@@ -11,8 +12,12 @@ import {
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
-const { SystemProgram, Keypair } = web3;
-let baseAccount = Keypair.generate();
+const { SystemProgram } = web3;
+
+const arr = Object.values(kp._keypair.secretKey);
+const secret = new Uint8Array(arr);
+const baseAccount = web3.Keypair.fromSecretKey(secret);
+
 const programID = new PublicKey(idl.metadata.address);
 const network = clusterApiUrl('devnet');
 const opts = { preflightCommitment: 'processed' }
@@ -89,11 +94,30 @@ const App = () => {
     }
   }
 
+  const parsePublicKey = (key) => {
+    console.log(key);
+    let publicKey = new PublicKey(key);
+    return publicKey;
+  }
+
   const sendGif = async () => {
-    if (inputValue.length > 0) {
-      console.log('Gif link:', inputValue);
-    } else {
-      console.log('Empty input. Try again.');
+    if (inputValue.length === 0)
+      return;
+
+    try {
+      const provider = getProvider();
+      const program = new Program(idl, programID, provider);
+
+      await program.rpc.addGif(inputValue, {
+        accounts: {
+          baseAccount: baseAccount.publicKey,
+        },
+      });
+      console.log('GIF sent to program', inputValue);
+
+      await getGifList();
+    } catch(e) {
+      console.log('Error sending GIF:', e);
     }
   }
 
