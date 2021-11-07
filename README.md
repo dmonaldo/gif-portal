@@ -1,16 +1,13 @@
-# buildspace Solana GIF Portal Project
+# GIF Portal
 
-### **Welcome 👋**
-To get started with this course, clone this repo and follow these commands:
+This project follows the buildspace course to deploy a smart contract on the Solana blockchain.
 
-1. Run `npm install` at the root of your directory
-2. Run `npm run start` to start the project
-3. Start coding!
+[https://gifportal.dantemonaldo.com/](https://gifportal.dantemonaldo.com/)
 
-### **What is the .vscode Folder?**
-If you use VSCode to build your app, we included a list of suggested extensions that will help you build this project! Once you open this project in VSCode, you will see a popup asking if you want to download the recommended extensions :).
+## Development
 
+`npm start` to run the development server.
 
+## Deploy
 
-### **Questions?**
-Have some questions make sure you head over to your [buildspace Dashboard](https://app.buildspace.so/courses/CObd6d35ce-3394-4bd8-977e-cbee82ae07a3) and link your Discord account so you can get access to helpful channels and your instructor!
+This site runs on GitHub pages using the `gh-pages` branch. To deploy, run `npm run deploy`.
