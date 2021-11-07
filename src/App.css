@@ -29,7 +29,7 @@
 
 .sub-text {
   font-size: 25px;
-  color: white;
+  color: white!important;
 }
 
 .gradient-text {
@@ -127,4 +127,8 @@
 
 .connected-container button {
   height: 50px;
+}
+
+a {
+  color: #fff;
 }
