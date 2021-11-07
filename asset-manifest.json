@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://gifportal.dantemonaldo.com/static/css/main.32740bf8.chunk.css",
-    "main.js": "https://gifportal.dantemonaldo.com/static/js/main.baed2e44.chunk.js",
-    "main.js.map": "https://gifportal.dantemonaldo.com/static/js/main.baed2e44.chunk.js.map",
+    "main.js": "https://gifportal.dantemonaldo.com/static/js/main.de242ea0.chunk.js",
+    "main.js.map": "https://gifportal.dantemonaldo.com/static/js/main.de242ea0.chunk.js.map",
     "runtime-main.js": "https://gifportal.dantemonaldo.com/static/js/runtime-main.2d353b26.js",
     "runtime-main.js.map": "https://gifportal.dantemonaldo.com/static/js/runtime-main.2d353b26.js.map",
     "static/js/2.852c0aba.chunk.js": "https://gifportal.dantemonaldo.com/static/js/2.852c0aba.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.2d353b26.js",
     "static/js/2.852c0aba.chunk.js",
     "static/css/main.32740bf8.chunk.css",
-    "static/js/main.baed2e44.chunk.js"
+    "static/js/main.de242ea0.chunk.js"
   ]
 }
