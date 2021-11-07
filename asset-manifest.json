@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.fab6468b.chunk.css",
-    "main.js": "/static/js/main.c9de98ac.chunk.js",
-    "main.js.map": "/static/js/main.c9de98ac.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8e328f58.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8e328f58.js.map",
-    "static/js/2.05da9da6.chunk.js": "/static/js/2.05da9da6.chunk.js",
-    "static/js/2.05da9da6.chunk.js.map": "/static/js/2.05da9da6.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.fab6468b.chunk.css.map": "/static/css/main.fab6468b.chunk.css.map",
-    "static/js/2.05da9da6.chunk.js.LICENSE.txt": "/static/js/2.05da9da6.chunk.js.LICENSE.txt",
-    "static/media/twitter-logo.d89d9a86.svg": "/static/media/twitter-logo.d89d9a86.svg"
+    "main.css": "https://gifportal.dantemonaldo.com/static/css/main.32740bf8.chunk.css",
+    "main.js": "https://gifportal.dantemonaldo.com/static/js/main.baed2e44.chunk.js",
+    "main.js.map": "https://gifportal.dantemonaldo.com/static/js/main.baed2e44.chunk.js.map",
+    "runtime-main.js": "https://gifportal.dantemonaldo.com/static/js/runtime-main.2d353b26.js",
+    "runtime-main.js.map": "https://gifportal.dantemonaldo.com/static/js/runtime-main.2d353b26.js.map",
+    "static/js/2.852c0aba.chunk.js": "https://gifportal.dantemonaldo.com/static/js/2.852c0aba.chunk.js",
+    "static/js/2.852c0aba.chunk.js.map": "https://gifportal.dantemonaldo.com/static/js/2.852c0aba.chunk.js.map",
+    "index.html": "https://gifportal.dantemonaldo.com/index.html",
+    "static/css/main.32740bf8.chunk.css.map": "https://gifportal.dantemonaldo.com/static/css/main.32740bf8.chunk.css.map",
+    "static/js/2.852c0aba.chunk.js.LICENSE.txt": "https://gifportal.dantemonaldo.com/static/js/2.852c0aba.chunk.js.LICENSE.txt",
+    "static/media/twitter-logo.d89d9a86.svg": "https://gifportal.dantemonaldo.com/static/media/twitter-logo.d89d9a86.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8e328f58.js",
-    "static/js/2.05da9da6.chunk.js",
-    "static/css/main.fab6468b.chunk.css",
-    "static/js/main.c9de98ac.chunk.js"
+    "static/js/runtime-main.2d353b26.js",
+    "static/js/2.852c0aba.chunk.js",
+    "static/css/main.32740bf8.chunk.css",
+    "static/js/main.baed2e44.chunk.js"
   ]
 }
